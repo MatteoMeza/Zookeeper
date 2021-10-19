@@ -1,14 +1,17 @@
 const fs = require("fs");
 const path = require("path");
-const { animals } = require("./data/animals.json");
-const PORT = process.env.PORT || 3002;
 const express = require("express");
-const { findSourceMap } = require("module");
+const { animals } = require("./data/animals.json");
+
+const PORT = process.env.PORT || 3002;
 const app = express();
+
 // Parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // Parse incoming JSON data
 app.use(express.json());
+
+const { findSourceMap } = require("module");
 
 
 
@@ -113,6 +116,10 @@ app.post("/api/animals", (req, res) => {
         const animal = createNewAnimal(req.body, animals);
         res.json(animal);
     }
+});
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 app.listen(PORT, () => {
