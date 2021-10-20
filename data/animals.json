@@ -126,6 +126,35 @@
         "hungry"
       ],
       "id": "12"
+    },
+    {
+      "name": "Nacho",
+      "species": "Dog",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "zany",
+        "loving",
+        "goofy"
+      ],
+      "id": "13"
+    },
+    {
+      "name": "Pánfilo",
+      "species": "Ox",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "Pánfilo",
+      "species": "Ox",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "15"
     }
   ]
 }
